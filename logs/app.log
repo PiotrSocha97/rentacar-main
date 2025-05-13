@@ -5144,3 +5144,105 @@ Caused by: java.net.ConnectException: Connection timed out: connect
 [INFO ] 2025-05-13 17:42:02.643 [main] RentacarApplicationTests - Rekord testowy został dodany do tabeli Samochody!
 [INFO ] 2025-05-13 17:42:02.675 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
 [INFO ] 2025-05-13 17:42:02.678 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 2025-05-13 17:43:14.462 [restartedMain] RentacarApplication - Starting RentacarApplication using Java 21.0.7 with PID 22744 (C:\Users\lukas\Desktop\rentacar-main\target\classes started by lukas in C:\Users\lukas\Desktop\rentacar-main)
+[INFO ] 2025-05-13 17:43:14.467 [restartedMain] RentacarApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2025-05-13 17:43:14.492 [restartedMain] DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ] 2025-05-13 17:43:14.492 [restartedMain] DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO ] 2025-05-13 17:43:14.887 [restartedMain] RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+[INFO ] 2025-05-13 17:43:14.899 [restartedMain] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 JDBC repository interfaces.
+[INFO ] 2025-05-13 17:43:15.238 [restartedMain] TomcatWebServer - Tomcat initialized with port 8080 (http)
+[INFO ] 2025-05-13 17:43:15.247 [restartedMain] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2025-05-13 17:43:15.248 [restartedMain] StandardService - Starting service [Tomcat]
+[INFO ] 2025-05-13 17:43:15.248 [restartedMain] StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+[INFO ] 2025-05-13 17:43:15.284 [restartedMain] [/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2025-05-13 17:43:15.284 [restartedMain] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 792 ms
+[INFO ] 2025-05-13 17:43:15.445 [restartedMain] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2025-05-13 17:43:15.483 [restartedMain] HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.MariaDbConnection@4c989772
+[INFO ] 2025-05-13 17:43:15.484 [restartedMain] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2025-05-13 17:43:15.585 [restartedMain] WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2025-05-13 17:43:15.904 [restartedMain] OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 2025-05-13 17:43:15.916 [restartedMain] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2025-05-13 17:43:15.928 [restartedMain] TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+[INFO ] 2025-05-13 17:43:15.934 [restartedMain] RentacarApplication - Started RentacarApplication in 1.689 seconds (process running for 2.356)
+[INFO ] 2025-05-13 17:43:21.518 [http-nio-8080-exec-1] [/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2025-05-13 17:43:21.519 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2025-05-13 17:43:21.519 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 0 ms
+[INFO ] 2025-05-13 17:43:21.537 [http-nio-8080-exec-1] RentacarController - Loaded /rejestracja mapping
+[INFO ] 2025-05-13 17:43:23.019 [http-nio-8080-exec-4] Baza - Polączono do bazy
+[INFO ] 2025-05-13 17:43:23.025 [http-nio-8080-exec-4] RentacarController - Loaded / mapping
+[INFO ] 2025-05-13 17:43:34.477 [http-nio-8080-exec-2] RentacarController - Loaded /wypozycz mapping
+[INFO ] 2025-05-13 17:43:37.539 [http-nio-8080-exec-8] RentacarController - Loaded /rejestracja mapping
+[INFO ] 2025-05-13 17:43:38.040 [http-nio-8080-exec-6] RentacarController - Loaded /dostepne mapping
+[INFO ] 2025-05-13 17:43:38.590 [http-nio-8080-exec-9] RentacarController - Loaded / mapping
+[INFO ] 2025-05-13 17:43:38.892 [http-nio-8080-exec-2] RentacarController - Loaded /dostepne mapping
+[INFO ] 2025-05-13 17:43:39.684 [http-nio-8080-exec-10] RentacarController - Loaded /wypozycz mapping
+[INFO ] 2025-05-13 17:43:39.891 [http-nio-8080-exec-5] RentacarController - Loaded / mapping
+[INFO ] 2025-05-13 17:52:53.065 [http-nio-8080-exec-1] RentacarController - Loaded /wypozycz mapping
+[INFO ] 2025-05-13 17:53:51.028 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 2025-05-13 17:53:51.029 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 2025-05-13 17:54:16.875 [restartedMain] RentacarApplication - Starting RentacarApplication using Java 21.0.7 with PID 6916 (C:\Users\lukas\Desktop\rentacar-main\target\classes started by lukas in C:\Users\lukas\Desktop\rentacar-main)
+[INFO ] 2025-05-13 17:54:16.880 [restartedMain] RentacarApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2025-05-13 17:54:16.912 [restartedMain] DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ] 2025-05-13 17:54:16.912 [restartedMain] DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO ] 2025-05-13 17:54:17.411 [restartedMain] RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+[INFO ] 2025-05-13 17:54:17.424 [restartedMain] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 JDBC repository interfaces.
+[INFO ] 2025-05-13 17:54:17.805 [restartedMain] TomcatWebServer - Tomcat initialized with port 8080 (http)
+[INFO ] 2025-05-13 17:54:17.814 [restartedMain] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2025-05-13 17:54:17.815 [restartedMain] StandardService - Starting service [Tomcat]
+[INFO ] 2025-05-13 17:54:17.816 [restartedMain] StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+[INFO ] 2025-05-13 17:54:17.854 [restartedMain] [/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2025-05-13 17:54:17.854 [restartedMain] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 941 ms
+[INFO ] 2025-05-13 17:54:18.018 [restartedMain] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2025-05-13 17:54:18.058 [restartedMain] HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.MariaDbConnection@7ede39d7
+[INFO ] 2025-05-13 17:54:18.059 [restartedMain] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2025-05-13 17:54:18.170 [restartedMain] WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2025-05-13 17:54:18.521 [restartedMain] OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 2025-05-13 17:54:18.533 [restartedMain] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2025-05-13 17:54:18.545 [restartedMain] TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+[INFO ] 2025-05-13 17:54:18.551 [restartedMain] RentacarApplication - Started RentacarApplication in 1.961 seconds (process running for 2.674)
+[INFO ] 2025-05-13 17:54:24.073 [http-nio-8080-exec-1] [/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2025-05-13 17:54:24.073 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2025-05-13 17:54:24.075 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 1 ms
+[INFO ] 2025-05-13 17:54:24.094 [http-nio-8080-exec-1] RentacarController - Loaded /rejestracja mapping
+[INFO ] 2025-05-13 17:54:25.508 [http-nio-8080-exec-4] Baza - Polączono do bazy
+[INFO ] 2025-05-13 17:54:25.515 [http-nio-8080-exec-4] RentacarController - Loaded / mapping
+[INFO ] 2025-05-13 17:54:28.020 [http-nio-8080-exec-2] RentacarController - Loaded /rejestracja mapping
+[INFO ] 2025-05-13 17:55:49.540 [http-nio-8080-exec-10] RentacarController - Loaded / mapping
+[INFO ] 2025-05-13 17:55:51.113 [http-nio-8080-exec-9] RentacarController - Loaded /wypozycz mapping
+[INFO ] 2025-05-13 17:55:52.360 [http-nio-8080-exec-6] RentacarController - Loaded /rejestracja mapping
+[INFO ] 2025-05-13 17:56:12.256 [http-nio-8080-exec-1] RentacarController - Dodano rekord do tabeli Klienci
+[INFO ] 2025-05-13 17:56:12.261 [http-nio-8080-exec-4] RentacarController - Loaded /dzieki mapping
+[INFO ] 2025-05-13 17:56:17.442 [http-nio-8080-exec-7] RentacarController - Loaded /wypozycz mapping
+[INFO ] 2025-05-13 17:57:08.024 [http-nio-8080-exec-3] RentacarController - Loaded / mapping
+[INFO ] 2025-05-13 17:57:21.077 [http-nio-8080-exec-10] RentacarController - Loaded /dostepne mapping
+[INFO ] 2025-05-13 17:57:22.759 [http-nio-8080-exec-8] RentacarController - Loaded /rejestracja mapping
+[INFO ] 2025-05-13 17:57:24.252 [http-nio-8080-exec-4] RentacarController - Loaded /wypozycz mapping
+[INFO ] 2025-05-13 17:58:14.038 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 2025-05-13 17:58:14.041 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 2025-05-13 17:58:19.008 [restartedMain] RentacarApplication - Starting RentacarApplication using Java 21.0.7 with PID 26380 (C:\Users\lukas\Desktop\rentacar-main\target\classes started by lukas in C:\Users\lukas\Desktop\rentacar-main)
+[INFO ] 2025-05-13 17:58:19.014 [restartedMain] RentacarApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2025-05-13 17:58:19.043 [restartedMain] DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ] 2025-05-13 17:58:19.044 [restartedMain] DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO ] 2025-05-13 17:58:19.481 [restartedMain] RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+[INFO ] 2025-05-13 17:58:19.496 [restartedMain] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 JDBC repository interfaces.
+[INFO ] 2025-05-13 17:58:19.944 [restartedMain] TomcatWebServer - Tomcat initialized with port 8080 (http)
+[INFO ] 2025-05-13 17:58:19.954 [restartedMain] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2025-05-13 17:58:19.956 [restartedMain] StandardService - Starting service [Tomcat]
+[INFO ] 2025-05-13 17:58:19.956 [restartedMain] StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+[INFO ] 2025-05-13 17:58:20.011 [restartedMain] [/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2025-05-13 17:58:20.012 [restartedMain] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 967 ms
+[INFO ] 2025-05-13 17:58:20.263 [restartedMain] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2025-05-13 17:58:20.312 [restartedMain] HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.MariaDbConnection@19f152e7
+[INFO ] 2025-05-13 17:58:20.314 [restartedMain] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2025-05-13 17:58:20.464 [restartedMain] WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2025-05-13 17:58:21.004 [restartedMain] OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 2025-05-13 17:58:21.021 [restartedMain] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2025-05-13 17:58:21.040 [restartedMain] TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+[INFO ] 2025-05-13 17:58:21.048 [restartedMain] RentacarApplication - Started RentacarApplication in 2.274 seconds (process running for 3.025)
+[INFO ] 2025-05-13 17:58:27.511 [http-nio-8080-exec-1] [/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2025-05-13 17:58:27.511 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2025-05-13 17:58:27.513 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 1 ms
+[INFO ] 2025-05-13 17:58:27.540 [http-nio-8080-exec-1] Baza - Polączono do bazy
+[INFO ] 2025-05-13 17:58:27.545 [http-nio-8080-exec-1] RentacarController - Loaded / mapping
+[INFO ] 2025-05-13 18:20:45.993 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 2025-05-13 18:20:45.995 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
