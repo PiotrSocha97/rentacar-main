@@ -7,40 +7,32 @@
 -- Wersja serwera: 11.1.2-MariaDB-1:11.1.2+maria~ubu2204
 -- Wersja PHP: 8.1.16
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `wypozyczalnia`
+-- Database: "wypozyczalnia"
 --
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `Klienci`
+-- Struktura tabeli dla tabeli "Klienci"
 --
 
-CREATE TABLE `Klienci` (
-  `pesel` varchar(11) NOT NULL,
-  `imie` varchar(50) DEFAULT NULL,
-  `nazwisko` varchar(50) DEFAULT NULL,
-  `adres` varchar(100) DEFAULT NULL,
-  `numer_telefonu` varchar(20) DEFAULT NULL,
-  `email` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+CREATE TABLE "Klienci" (
+  "pesel" varchar(11) NOT NULL,
+  "imie" varchar(50) DEFAULT NULL,
+  "nazwisko" varchar(50) DEFAULT NULL,
+  "adres" varchar(100) DEFAULT NULL,
+  "numer_telefonu" varchar(20) DEFAULT NULL,
+  "email" varchar(100) DEFAULT NULL
+);
 
 --
--- Dumping data for table `Klienci`
+-- Dumping data for table "Klienci"
 --
 
-INSERT INTO `Klienci` (`pesel`, `imie`, `nazwisko`, `adres`, `numer_telefonu`, `email`) VALUES
+INSERT INTO "Klienci" ("pesel", "imie", "nazwisko", "adres", "numer_telefonu", "email") VALUES
 ('02270413414', 'Andrii', 'wda', 'wda', '231413221', 'dawd@dssfa'),
 ('02270416781', 'Andrii', 'Solianyk', 'Staffa 23', '893879136', 'zdarova@gmail.com'),
 ('02312121223', 'Łukasz', 'Tomczyk', 'Gnieiwicin', '444555666', 'mail@mail.com'),
@@ -54,23 +46,23 @@ INSERT INTO `Klienci` (`pesel`, `imie`, `nazwisko`, `adres`, `numer_telefonu`, `
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `Samochody`
+-- Struktura tabeli dla tabeli "Samochody"
 --
 
-CREATE TABLE `Samochody` (
-  `SamochodID` int(11) NOT NULL,
-  `Marka` varchar(50) DEFAULT NULL,
-  `Model` varchar(50) DEFAULT NULL,
-  `RokProdukcji` int(11) DEFAULT NULL,
-  `CenaDzienna` decimal(10,2) DEFAULT NULL,
-  `Dostepnosc` varchar(3) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+CREATE TABLE "Samochody" (
+  "SamochodID" SERIAL,
+  "Marka" varchar(50) DEFAULT NULL,
+  "Model" varchar(50) DEFAULT NULL,
+  "RokProdukcji" integer DEFAULT NULL,
+  "CenaDzienna" decimal(10,2) DEFAULT NULL,
+  "Dostepnosc" varchar(3) DEFAULT NULL
+);
 
 --
--- Dumping data for table `Samochody`
+-- Dumping data for table "Samochody"
 --
 
-INSERT INTO `Samochody` (`SamochodID`, `Marka`, `Model`, `RokProdukcji`, `CenaDzienna`, `Dostepnosc`) VALUES
+INSERT INTO "Samochody" ("SamochodID", "Marka", "Model", "RokProdukcji", "CenaDzienna", "Dostepnosc") VALUES
 (1, 'Toyota', 'Yaris Cross', 2021, 200.00, 'Tak'),
 (2, 'Audi', 'A3', 2016, 550.00, 'Tak'),
 (3, 'Peugeot', '4008', 2018, 400.00, 'Tak'),
@@ -81,23 +73,23 @@ INSERT INTO `Samochody` (`SamochodID`, `Marka`, `Model`, `RokProdukcji`, `CenaDz
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `Wypozyczenia`
+-- Struktura tabeli dla tabeli "Wypozyczenia"
 --
 
-CREATE TABLE `Wypozyczenia` (
-  `WypozyczenieID` int(11) NOT NULL,
-  `SamochodID` int(11) DEFAULT NULL,
-  `pesel` varchar(11) DEFAULT NULL,
-  `DataWypozyczenia` date DEFAULT NULL,
-  `DataZwrotu` date DEFAULT NULL,
-  `KosztWypozyczenia` decimal(10,2) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+CREATE TABLE "Wypozyczenia" (
+  "WypozyczenieID" SERIAL,
+  "SamochodID" integer DEFAULT NULL,
+  "pesel" varchar(11) DEFAULT NULL,
+  "DataWypozyczenia" date DEFAULT NULL,
+  "DataZwrotu" date DEFAULT NULL,
+  "KosztWypozyczenia" decimal(10,2) DEFAULT NULL
+);
 
 --
--- Dumping data for table `Wypozyczenia`
+-- Dumping data for table "Wypozyczenia"
 --
 
-INSERT INTO `Wypozyczenia` (`WypozyczenieID`, `SamochodID`, `pesel`, `DataWypozyczenia`, `DataZwrotu`, `KosztWypozyczenia`) VALUES
+INSERT INTO "Wypozyczenia" ("WypozyczenieID", "SamochodID", "pesel", "DataWypozyczenia", "DataZwrotu", "KosztWypozyczenia") VALUES
 (1, 3, '94010212345', '2023-11-07', '2023-11-14', 1000.00),
 (2, 1, '89121523456', '2023-11-01', '2023-11-13', 2000.00),
 (3, 6, '02270413414', '2023-12-01', '2023-12-15', 3500.00),
@@ -113,52 +105,34 @@ INSERT INTO `Wypozyczenia` (`WypozyczenieID`, `SamochodID`, `pesel`, `DataWypozy
 --
 
 --
--- Indeksy dla tabeli `Klienci`
+-- Indeksy dla tabeli "Klienci"
 --
-ALTER TABLE `Klienci`
-  ADD PRIMARY KEY (`pesel`);
+ALTER TABLE "Klienci"
+  ADD PRIMARY KEY ("pesel");
 
 --
--- Indeksy dla tabeli `Samochody`
+-- Indeksy dla tabeli "Samochody"
 --
-ALTER TABLE `Samochody`
-  ADD PRIMARY KEY (`SamochodID`);
+ALTER TABLE "Samochody"
+  ADD PRIMARY KEY ("SamochodID");
 
 --
--- Indeksy dla tabeli `Wypozyczenia`
+-- Indeksy dla tabeli "Wypozyczenia"
 --
-ALTER TABLE `Wypozyczenia`
-  ADD PRIMARY KEY (`WypozyczenieID`),
-  ADD KEY `SamochodID` (`SamochodID`),
-  ADD KEY `pesel` (`pesel`) USING BTREE;
+ALTER TABLE "Wypozyczenia"
+  ADD PRIMARY KEY ("WypozyczenieID");
 
---
--- AUTO_INCREMENT for dumped tables
---
+CREATE INDEX IF NOT EXISTS "idx_wypozyczenia_samochodid" ON "Wypozyczenia" ("SamochodID");
+CREATE INDEX IF NOT EXISTS "idx_wypozyczenia_pesel" ON "Wypozyczenia" ("pesel");
 
---
--- AUTO_INCREMENT for table `Samochody`
---
-ALTER TABLE `Samochody`
-  MODIFY `SamochodID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
-
---
--- AUTO_INCREMENT for table `Wypozyczenia`
---
-ALTER TABLE `Wypozyczenia`
-  MODIFY `WypozyczenieID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `Wypozyczenia`
+-- Constraints for table "Wypozyczenia"
 --
-ALTER TABLE `Wypozyczenia`
-  ADD CONSTRAINT `Wypozyczenia_ibfk_1` FOREIGN KEY (`SamochodID`) REFERENCES `Samochody` (`SamochodID`);
+ALTER TABLE "Wypozyczenia"
+  ADD CONSTRAINT "Wypozyczenia_ibfk_1" FOREIGN KEY ("SamochodID") REFERENCES "Samochody" ("SamochodID");
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
