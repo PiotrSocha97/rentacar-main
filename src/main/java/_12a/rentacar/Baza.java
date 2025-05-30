@@ -68,7 +68,7 @@ public class Baza {
             String deleteQuery = "DELETE FROM Klienci WHERE pesel = ?";
 
             try(PreparedStatement preparedStatement = connection.prepareStatement(deleteQuery)) {
-                preparedStatement.setString(0, pesel);
+                preparedStatement.setString(1, pesel);
 
                 int rowsAffected = preparedStatement.executeUpdate();
 
@@ -92,7 +92,7 @@ public class Baza {
             String insertQuery = "INSERT INTO Wypozyczenia (SamochodID, pesel, DataWypozyczenia, DataZwrotu, KosztWypozyczenia) VALUES (?, ?, ?, ?, ?)";
 
             try (PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
-                preparedStatement.setString(1, selectedCar);
+                preparedStatement.setInt(1, Integer.parseInt(selectedCar));
                 preparedStatement.setString(2, pesel);
                 preparedStatement.setString(3, pickup_date);
                 preparedStatement.setString(4, return_date);
@@ -111,7 +111,7 @@ public class Baza {
             String deleteQuery = "DELETE FROM Wypozyczenia WHERE WypozyczenieID = ?";
 
             try(PreparedStatement preparedStatement = connection.prepareStatement(deleteQuery)) {
-                preparedStatement.setString(0, id);
+                preparedStatement.setInt(1, Integer.parseInt(id));
 
                 int rowsAffected = preparedStatement.executeUpdate();
 
@@ -129,7 +129,7 @@ public class Baza {
             int cenaDzienna = -1;
 
             try (PreparedStatement query = connection.prepareStatement(cenaSamochoduQuery)) {
-                query.setString(1, selectedCar);
+                query.setInt(1, Integer.parseInt(selectedCar));
                 try (ResultSet resultSet = query.executeQuery()) {
                     if (resultSet.next()) {
                         cenaDzienna = resultSet.getInt("CenaDzienna");
@@ -147,7 +147,7 @@ public class Baza {
             String query = "SELECT Marka, Model FROM Samochody WHERE SamochodID = ?";
             String marka = null, model = null;
             try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-                preparedStatement.setString(1, selectedCar);
+                preparedStatement.setInt(1, Integer.parseInt(selectedCar));
                 try (ResultSet resultSet = preparedStatement.executeQuery()) {
                     if (resultSet.next()) {
                         marka = resultSet.getString("Marka");
@@ -168,14 +168,14 @@ public class Baza {
             int CenaDzienna,
             String Dostepnosc
         ) {
-            String query = "INSERT INTO Samochody (SamochodID, Marka, Model, RokProdukcji, CenaDzienna, Dostepnosc) VALUES (NULL, '?', '?', '?', '?', '?')";
+            String query = "INSERT INTO Samochody (SamochodID, Marka, Model, RokProdukcji, CenaDzienna, Dostepnosc) VALUES (NULL, ?, ?, ?, ?, ?)";
 
             try(PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-                preparedStatement.setString(0, Marka);
-                preparedStatement.setString(1, Model);
-                preparedStatement.setInt(2, RokProdukcji);
-                preparedStatement.setInt(3, CenaDzienna);
-                preparedStatement.setString(4, Dostepnosc);
+                preparedStatement.setString(1, Marka);
+                preparedStatement.setString(2, Model);
+                preparedStatement.setInt(3, RokProdukcji);
+                preparedStatement.setInt(4, CenaDzienna);
+                preparedStatement.setString(5, Dostepnosc);
 
                 int rowsAffected = preparedStatement.executeUpdate();
 
@@ -190,7 +190,7 @@ public class Baza {
             String deleteQuery = "DELETE FROM Samochody WHERE SamochodID = ?";
 
             try(PreparedStatement preparedStatement = connection.prepareStatement(deleteQuery)) {
-                preparedStatement.setString(0, id);
+                preparedStatement.setInt(1, Integer.parseInt(id));
 
                 int rowsAffected = preparedStatement.executeUpdate();
 
