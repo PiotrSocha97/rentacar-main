@@ -168,14 +168,14 @@ public class Baza {
             int CenaDzienna,
             String Dostepnosc
         ) {
-            String query = "INSERT INTO Samochody (SamochodID, Marka, Model, RokProdukcji, CenaDzienna, Dostepnosc) VALUES (NULL, '?', '?', '?', '?', '?')";
+            String query = "INSERT INTO Samochody (SamochodID, Marka, Model, RokProdukcji, CenaDzienna, Dostepnosc) VALUES (DEFAULT, ?, ?, ?, ?, ?)";
 
             try(PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-                preparedStatement.setString(0, Marka);
-                preparedStatement.setString(1, Model);
-                preparedStatement.setInt(2, RokProdukcji);
-                preparedStatement.setInt(3, CenaDzienna);
-                preparedStatement.setString(4, Dostepnosc);
+                preparedStatement.setString(1, Marka);
+                preparedStatement.setString(2, Model);
+                preparedStatement.setInt(3, RokProdukcji);
+                preparedStatement.setInt(4, CenaDzienna);
+                preparedStatement.setString(5, Dostepnosc);
 
                 int rowsAffected = preparedStatement.executeUpdate();
 
